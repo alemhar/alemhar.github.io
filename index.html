@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en" x-data x-init="Alpine.store('theme').init()" data-theme="dark" data-bs-theme="dark" :data-theme="Alpine.store('theme').current" :data-bs-theme="Alpine.store('theme').current">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Senior Software Developer – Portfolio and Resume" />
+    <meta name="author" content="Alemhar Salihuddin" />
+    <title>Senior Software Developer · Portfolio</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- Site CSS -->
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="./public/favicon.ico" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="80" tabindex="0">
+    <!-- Navbar -->
+    <nav id="topnav" class="navbar navbar-expand-lg navbar-dark bg-body-tertiary fixed-top border-bottom">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="#hero">Alemhar Salihuddin</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <!-- <a class="btn btn-outline-primary btn-sm" href="./assets/pdf/resume.pdf" target="_blank" rel="noopener">Resume</a> -->
+            <button type="button" class="btn btn-outline-secondary btn-sm" @click="Alpine.store('theme').toggle()" x-text="Alpine.store('theme').label()" aria-label="Toggle theme"></button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="hero" class="py-5 section-hero">
+      <div class="container pt-5">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <p class="text-primary fw-semibold mb-2">Senior Full‑Stack Software Engineer</p>
+            <h1 class="display-5 fw-bold lh-tight mb-3">Alemhar I. Salihuddin</h1>
+            <p class="lead text-body-secondary mb-4">Full‑stack developer with deep backend experience delivering web platforms and services across PHP/Laravel, Node.js, Vue/React, and Python/Django. Comfortable on AWS/Azure/GCP with SQL/NoSQL databases. Pragmatic builder focused on reliability, maintainability, and measurable impact.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
+              <a href="#contact" class="btn btn-outline-secondary btn-lg">Get in Touch</a>
+            </div>
+            <div class="mt-3 small text-body-secondary">
+              <span class="">Davao City, Philippines (UTC+8)</span>
+              <!-- <a class="me-3" href="tel:+639179467081">+63 917 946 7081</a> -->
+              <span><a href="mailto:alemhar@gmail.com">alemhar@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 text-center">
+            <img src="./assets/images/headshot.jpg" class="rounded-4 shadow-sm hero-headshot" alt="Headshot" width="320" height="320" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="py-5 section-divider">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-7">
+            <h2 class="h1 mb-3">About</h2>
+            <p class="mb-3">I’m a senior software developer with expertise in distributed systems, API design, and cloud infrastructure. I enjoy collaborating across product and platform teams to translate requirements into robust architectures and maintainable code.</p>
+            <ul class="list-unstyled text-body-secondary">
+              <li>• System design, performance tuning, and reliability engineering</li>
+              <li>• Pragmatic, testable code with CI/CD and IaC</li>
+              <li>• Mentorship, code reviews, and technical leadership</li>
+            </ul>
+            <div class="mt-3 d-flex gap-2">
+              <!-- <a href="./assets/pdf/resume.pdf" target="_blank" rel="noopener" class="btn btn-outline-primary">Download Resume</a> -->
+              <a href="#contact" class="btn btn-outline-secondary">Contact</a>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="p-4 rounded-4 bg-surface border">
+              <h3 class="h5">At a glance</h3>
+              <dl class="row small mb-0">
+                <dt class="col-5">Experience</dt><dd class="col-7">8+ years</dd>
+                <dt class="col-5">Focus</dt><dd class="col-7">Backend, Cloud, APIs</dd>
+                <dt class="col-5">Location</dt><dd class="col-7">Remote / On-site</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-5">
+      <div class="container">
+        <h2 class="h1 mb-4">Skills</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h6 text-uppercase text-body-secondary">Programming</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-secondary">PHP</span>
+              <span class="badge text-bg-secondary">Laravel</span>
+              <span class="badge text-bg-secondary">CodeIgniter</span>
+              <span class="badge text-bg-secondary">Phalcon</span>
+              <span class="badge text-bg-secondary">JavaScript</span>
+              <span class="badge text-bg-secondary">Node.js</span>
+              <span class="badge text-bg-secondary">Vue.js</span>
+              <span class="badge text-bg-secondary">React</span>
+              <span class="badge text-bg-secondary">jQuery</span>
+              <span class="badge text-bg-secondary">Python</span>
+              <span class="badge text-bg-secondary">Django</span>
+              <span class="badge text-bg-secondary">VBScript</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h6 text-uppercase text-body-secondary">Databases</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-secondary">MySQL</span>
+              <span class="badge text-bg-secondary">PostgreSQL</span>
+              <span class="badge text-bg-secondary">MS SQL</span>
+              <span class="badge text-bg-secondary">MongoDB</span>
+              <span class="badge text-bg-secondary">MS Access</span>
+              <span class="badge text-bg-secondary">dBase</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h6 text-uppercase text-body-secondary">Platforms</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-secondary">AWS</span>
+              <span class="badge text-bg-secondary">Azure</span>
+              <span class="badge text-bg-secondary">Google Cloud</span>
+              <span class="badge text-bg-secondary">cPanel</span>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h3 class="h6 text-uppercase text-body-secondary">Operating Systems</h3>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge text-bg-secondary">Mac</span>
+              <span class="badge text-bg-secondary">Windows</span>
+              <span class="badge text-bg-secondary">Linux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="py-5 section-alt">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <div>
+            <h2 class="h1 mb-1">Weekend Project Challenge</h2>
+            <p class="text-body-secondary mb-0">Rapid, human‑in‑the‑loop builds where I pair with AI to ship working prototypes in a weekend. Each project emphasizes clear architecture, visible agent reasoning, and pragmatic UX—like a Vue + Leaflet geo tool and an AI‑guided OSINT analyzer.</p>
+          </div>
+          <!-- <div class="btn-group" role="group" aria-label="Project filters" x-data="{ f: 'all' }">
+            <input type="radio" class="btn-check" name="filter" id="pf-all" value="all" x-model="f" checked>
+            <label class="btn btn-outline-secondary btn-sm" for="pf-all">All</label>
+            <input type="radio" class="btn-check" name="filter" id="pf-sys" value="system" x-model="f">
+            <label class="btn btn-outline-secondary btn-sm" for="pf-sys">Systems</label>
+            <input type="radio" class="btn-check" name="filter" id="pf-web" value="web" x-model="f">
+            <label class="btn btn-outline-secondary btn-sm" for="pf-web">Web</label>
+          </div> -->
+        </div>
+
+        <div class="row g-4" x-data="{ f: 'all' }">
+          <!-- GeoPlottr Project Card -->
+          <div class="col-12 col-lg-6" x-show="f === 'all' || f === 'web'" x-transition>
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1">GeoPlottr — Developer + AI Weekend Build</h3>
+                    <p class="card-text small text-body-secondary mb-2">Vue + Leaflet · Draw, save, and highlight shapes with area calculations</p>
+                  </div>
+                  <span class="badge rounded-pill text-bg-primary align-self-start">web</span>
+                </div>
+                <p class="mb-3">A weekend challenge to co-build a mapping feature app with an AI coding partner. Produced a functional app that lets users draw, save, and highlight geoshapes with computed areas — delivered end-to-end in a weekend.</p>
+                <ul class="small text-body-secondary mb-3">
+                  <li>Human-in-the-loop: architecture decisions, debugging nuance, and security considerations remained developer-driven.</li>
+                  <li>AI accelerated implementation but required guidance to align with patterns and browser constraints.</li>
+                </ul>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-primary" href="https://lnkd.in/gmEeYK7T" target="_blank" rel="noopener">Live Demo</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://github.com/alemhar/GeoPlottr" target="_blank" rel="noopener">GitHub</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="https://lnkd.in/gVphx-Mr" target="_blank" rel="noopener">Read Conversation</a>
+                </div>
+                <!-- <div class="mt-3 small">
+                  <strong>Demo creds:</strong>
+                  <span class="ms-2">Username: <code>test@geoplottr.com</code></span>
+                  <span class="ms-3">Password: <code>password</code></span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Digital Footprint Analyzer Project Card -->
+          <div class="col-12 col-lg-6" x-show="f === 'all' || f === 'web'" x-transition>
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1">Strategist‑Led Digital Footprint Analyzer</h3>
+                    <p class="card-text small text-body-secondary mb-2">AI Agents + OSINT UX · Stepwise investigator with human‑in‑the‑loop gates</p>
+                  </div>
+                  <span class="badge rounded-pill text-bg-primary align-self-start">web</span>
+                </div>
+                <p class="mb-3">An AI‑assisted OSINT tool where a "Security Strategist" proposes a minimal, prioritized plan with rationale, and you click Continue to execute steps and reveal findings one‑by‑one. Transparent reasoning, tight token control, and a nostalgic terminal vibe.</p>
+                <ul class="small text-body-secondary mb-3">
+                  <li>Human‑directed agents: Strategist (plan), Researcher (execute), Reporter (assemble report).</li>
+                  <li>Inputs supported: Name, LinkedIn, social handles, GitHub, website, usernames, location hint.</li>
+                  <li>Designed for visibility and control: see the step and rationale before running it.</li>
+                </ul>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-outline-secondary" href="https://github.com/alemhar/digital-footprints-analyzer" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- This Portfolio Site Project Card -->
+          <div class="col-12 col-lg-6" x-show="f === 'all' || f === 'web'" x-transition>
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <div class="d-flex align-items-start justify-content-between gap-3">
+                  <div>
+                    <h3 class="h5 card-title mb-1">Personal Portfolio — Built with AI in ~1 hour</h3>
+                    <p class="card-text small text-body-secondary mb-2">Bootstrap + Alpine.js · One‑page senior portfolio with dark mode</p>
+                  </div>
+                  <span class="badge rounded-pill text-bg-primary align-self-start">web</span>
+                </div>
+                <p class="mb-3">Partnered with an AI coding assistant to plan, scaffold, and style this single‑page site. Includes theme toggle, ScrollSpy nav, resume integration, and a polished developer‑focused layout.</p>
+                <ul class="small text-body-secondary mb-3">
+                  <li>No build step: plain HTML/CSS/JS via CDN for fast hosting (e.g., GitHub Pages).</li>
+                  <li>Accessible, responsive layout with maintainable structure and DRY components.</li>
+                </ul>
+                <div class="mt-auto d-flex flex-wrap gap-2">
+                  <a class="btn btn-sm btn-outline-secondary" href="https://github.com/alemhar/alemhar.github.io" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-5">
+      <div class="container">
+        <h2 class="h1 mb-4">Experience</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Software Engineer · Fuselabs</h3>
+                <p class="mb-1 small text-body-secondary">Remote · June 2023 – Present · Bundall, QLD, Australia</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Full‑Stack</span>
+            </div>
+            <ul class="small mb-0">
+              <li>Delivering full‑stack features across PHP/Node/Vue/React and cloud services.</li>
+              <li>Collaborating remotely on product iterations and platform improvements.</li>
+            </ul>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Senior Full Stack Developer · Extreme Networks Australia</h3>
+                <p class="mb-1 small text-body-secondary">Remote · March 2022 – May 2023 · Carrum Downs, Victoria, Australia</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Full‑Stack</span>
+            </div>
+            <ul class="small mb-0">
+              <li>Built and maintained web applications and APIs with modern JavaScript and PHP frameworks.</li>
+              <li>Improved reliability and developer workflows across the stack.</li>
+            </ul>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Senior Web Developer · Allegiance Oil & Gas / Optimize Overseas LLC</h3>
+                <p class="mb-1 small text-body-secondary">Remote · May 2015 – March 2022 · Cypress, Texas, USA</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Web</span>
+            </div>
+            <ul class="small mb-0">
+              <li>Developed and supported business systems, dashboards, and internal tools.</li>
+              <li>Worked across frontend/backend with PHP, JavaScript frameworks, and SQL databases.</li>
+            </ul>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Programmer and Tech Engineer · Vintasoft Ltd.</h3>
+                <p class="mb-1 small text-body-secondary">Hybrid · June 2012 – May 2015 · Zamboanga City, Philippines</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Engineering</span>
+            </div>
+            <ul class="small mb-0">
+              <li>Programmed and supported technical solutions for local clients.</li>
+            </ul>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Senior Automation Programmer · PROICT - Division, United Yousef M. Naghi</h3>
+                <p class="mb-1 small text-body-secondary">On‑site · March 2003 – April 2012 · Jeddah, Saudi Arabia</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Automation</span>
+            </div>
+            <ul class="small mb-0">
+              <li>Led automation programming projects and system integrations.</li>
+            </ul>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">Software Programmer · Universidad de Zamboanga</h3>
+                <p class="mb-1 small text-body-secondary">On‑site · Oct 2000 – Nov 2002 · Zamboanga City, Philippines</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Software</span>
+            </div>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">System Database Programmer · Social Zone of Peace and Development Social Fund (World Bank Funded)</h3>
+                <p class="mb-1 small text-body-secondary">On‑site · Feb 2000 – Oct 2000 · Zamboanga City, Philippines</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Database</span>
+            </div>
+          </li>
+          <li class="list-group-item px-0 py-3">
+            <div class="d-flex justify-content-between">
+              <div>
+                <h3 class="h5 mb-1">System Administrator‑Technical · NetAccess MOSCOM Zamboanga (ISP)</h3>
+                <p class="mb-1 small text-body-secondary">On‑site · July 1997 – Nov 2000 · Zamboanga City, Philippines</p>
+              </div>
+              <span class="badge text-bg-secondary align-self-start">Systems</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="py-5 section-alt">
+      <div class="container">
+        <h2 class="h1 mb-4">Education & Certifications</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="p-4 rounded-4 bg-surface border h-100">
+              <h3 class="h5 mb-3">Education</h3>
+              <ul class="list-unstyled mb-0 small">
+                <li class="mb-2"><strong>B.S. in Computer Engineering</strong> — Universidad de Zamboanga, Philippines (1992–1997)</li>
+                <li class="mb-2">CCNA — Cisco Networking Academy, Philippines (2001–2002)</li>
+                <li class="mb-2">Career Civil Service Examination — Passed (Aug 1997)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-4 rounded-4 bg-surface border h-100">
+              <h3 class="h5 mb-3">Selected Certifications</h3>
+              <ul class="list-unstyled mb-0 small">
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-bfd57346-65a9-4625-a60e-6199a03c77fa.pdf" target="_blank" rel="noopener">Vue.js (2021)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-12ce3f8a-8d98-44c9-bf6e-9ff8d838d25f.pdf" target="_blank" rel="noopener">Python (2022)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-834d99a2-c685-423e-bc49-b46ff3ca3022.pdf" target="_blank" rel="noopener">JavaScript (2022)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-a7c52662-d2a8-4f6e-91f5-8b52362d39d8.pdf" target="_blank" rel="noopener">SOLID Principles (2023)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1de4819f-765f-463b-ad0b-5b10a228fcff.pdf" target="_blank" rel="noopener">React.js (2023)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-06b60a99-ba8e-4564-9a22-0d5350585fc4.pdf" target="_blank" rel="noopener">Node.js/Express.js (2024)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-cbc978a8-0d50-49ba-b020-7d622ad49f9c.pdf" target="_blank" rel="noopener">Mastering TypeScript (2024)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-20e444d0-2e4d-46ea-b3d9-213e40cf48c3.pdf" target="_blank" rel="noopener">AI for Developers (2024)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-f3cf0eda-7b1f-4c85-bc44-85f3c04430e4.pdf" target="_blank" rel="noopener">Local LLMs (2025)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-72ddf7d4-f5a5-4dc8-ad84-28126c8e75f0.pdf" target="_blank" rel="noopener">MCP Crash Course (2025)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-7806f0f0-d741-4a10-92d3-d7292ad60a86.pdf" target="_blank" rel="noopener">FastAPI Full‑Stack (2025)</a></li>
+                <li class="mb-1"><a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-1ed4b961-746a-46f4-a4f4-384407970c95.pdf" target="_blank" rel="noopener">Agentic AI Engineering (2025)</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5 section-divider">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-7">
+            <h2 class="h1 mb-3">Contact</h2>
+            <p class="mb-3">I’m a Software Engineer with extensive experience building scalable, secure web applications across diverse industries. With a foundation in Full‑Stack Web Development and Computer Engineering, I specialize in innovative SaaS solutions that streamline operations and drive technology‑powered growth.</p>
+            <p class="mb-3">As part of <a href="https://fuselabs.ai" target="_blank" rel="noopener">FuseLabs</a>, I collaborate with a talented team to design private and secure AI solutions tailored to transform businesses and improve lives. We build AI‑capable web and mobile apps that enhance operational efficiency and help organizations become future‑ready.</p>
+            <p class="mb-3">With a proven track record—including awards in health and higher education from the Australian Government and the Business School Accreditation Organisation—I’m passionate about leveraging technology for the greater good. If you’re looking for custom software or want to explore how AI can revolutionize your business, let’s connect.</p>
+            <div class="d-flex gap-2 flex-wrap">
+              <a class="btn btn-primary" href="mailto:alemhar@gmail.com">Email</a>
+              <a class="btn btn-outline-secondary" href="https://www.linkedin.com/in/alemhar-salihuddin/" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn btn-outline-secondary" href="https://github.com/alemhar" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <!-- <div class="col-md-5">
+            <div class="p-4 rounded-4 bg-surface border">
+              <h3 class="h6 text-uppercase text-body-secondary">Quick facts</h3>
+              <ul class="list-unstyled small mb-0">
+                <li>Open to remote or hybrid</li>
+                <li>Timezone: Philippines (UTC+8)</li>
+                <li>Mobile: <a href="tel:+639179467081">+63 917 946 7081</a></li>
+              </ul>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 border-top bg-body-tertiary">
+      <div class="container d-flex justify-content-between align-items-center">
+        <small class="text-body-secondary">© <span x-text="new Date().getFullYear()"></span> Alemhar Salihuddin</small>
+        <a href="#hero" class="btn btn-sm btn-outline-secondary">Back to top</a>
+      </div>
+    </footer>
+
+    <!-- Alpine.js (CDN) -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Bootstrap JS Bundle (CDN) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Site JS -->
+    <script src="./js/main.js" defer></script>
+  </body>
+</html>

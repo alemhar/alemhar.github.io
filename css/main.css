@@ -1,0 +1,89 @@
+/* Base: variables and resets */
+:root {
+  --brand-primary: #6366F1; /* indigo-500 */
+  --brand-primary-rgb: 99, 102, 241; /* rgb for #6366F1 */
+  --text-primary: #0b1320;
+  --text-secondary: #6c757d;
+  --surface: #ffffff;
+  --surface-alt: #f8f9fa;
+  --border: #e5e7eb;
+}
+
+[data-theme="dark"] {
+  --brand-primary: #A5B4FC; /* indigo-200 */
+  --text-primary: #e7eaf0;
+  --text-secondary: #a8b3c7;
+  --surface: #0b1320;
+  --surface-alt: #0e1726;
+  --border: #1f2a3a;
+}
+
+/* Ensure Bootstrap picks up our palette under its theme selectors */
+[data-bs-theme="light"] {
+  --bs-primary: var(--brand-primary);
+  --bs-primary-rgb: var(--brand-primary-rgb);
+  --bs-link-color: var(--brand-primary);
+  --bs-link-hover-color: var(--brand-primary);
+  --bs-body-color: var(--text-primary);
+  --bs-secondary-color: var(--text-secondary);
+  --bs-body-bg: var(--surface);
+  --bs-tertiary-bg: var(--surface-alt);
+  --bs-border-color: var(--border);
+}
+
+[data-bs-theme="dark"] {
+  --bs-primary: var(--brand-primary);
+  --bs-primary-rgb: 165, 180, 252; /* rgb for #A5B4FC */
+  --bs-link-color: var(--brand-primary);
+  --bs-link-hover-color: var(--brand-primary);
+  --bs-body-color: var(--text-primary);
+  --bs-secondary-color: var(--text-secondary);
+  --bs-body-bg: var(--surface);
+  --bs-tertiary-bg: var(--surface-alt);
+  --bs-border-color: var(--border);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
+.bg-surface { background-color: var(--surface); }
+.section-alt { background-color: var(--surface-alt); }
+.section-divider { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+/* Navbar */
+.navbar.bg-body-tertiary { background-color: var(--surface) !important; }
+.navbar, .dropdown-menu { border-color: var(--border) !important; }
+
+/* Hero */
+.section-hero { margin-top: 56px; }
+.hero-headshot { width: 320px; height: 320px; object-fit: cover; }
+
+/* Typography helpers */
+.text-body-secondary { color: var(--text-secondary) !important; }
+
+/* Cards and borders */
+.card { background: var(--surface); border-color: var(--border); }
+.list-group-item { background: var(--surface); border-color: var(--border); }
+.border { border-color: var(--border) !important; }
+.bg-body-tertiary { background-color: var(--surface-alt) !important; }
+
+/* Buttons */
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--brand-primary) 90%, #000 10%);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--brand-primary) 85%, #000 15%);
+  --bs-btn-active-bg: color-mix(in srgb, var(--brand-primary) 80%, #000 20%);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--brand-primary) 75%, #000 25%);
+}
+.btn-outline-primary { --bs-btn-color: var(--brand-primary); --bs-btn-border-color: var(--brand-primary); }
+
+/* Badges using primary should reflect brand color */
+.badge.text-bg-primary { background-color: var(--brand-primary) !important; border-color: var(--brand-primary) !important; }
+
+/* Accessibility tweaks */
+a:focus-visible, button:focus-visible { outline: 2px dashed var(--brand-primary); outline-offset: 2px; }
