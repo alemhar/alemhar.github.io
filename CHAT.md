@@ -85,29 +85,6 @@ What I Learned About AI + Development
 
 While AI coding assistants are incredibly powerful (and getting better every day), I discovered something crucial: **they augment developers rather than replace them**. Here's why:
 
-- **Architectural Vision**: As developers, we carry mental models of patterns, architectures, and best practices that AI simply doesn't have. I found myself guiding the AI toward my preferred implementation patterns rather than accepting always its first suggestion.
-- **Critical Decision Making**: Several times during development, I had to firmly reject suggestions that didn't align with my architectural vision - something only a human developer with context could do.
-- **Debugging Nuance**: When geolocation features broke the app, the AI suggested fixes that didn't match browser security requirements. My developer instincts knew to question these solutions and push for better ones.
-
-The key insight? **AI accelerates development dramatically, but the human developer remains the architect and decision-maker.**
-
-Try It Yourself!
-
-Don't just take my word for it - I've deployed a live version of Geo Plotter that you can try right now:  
-👉 **Live Demo**: https://lnkd.in/gmEeYK7T  
-👤 **Username**: test@geoplottr.com  
-🔑 **Password**: password
-
-The Proof is in the Code
-
-I've documented the entire conversation between me and the AI from idea selection to completed implementation. You can see exactly how this collaboration worked - including where AI helped and where human guidance was essential.  
-Check out the full unedited conversation history here: (https://lnkd.in/gVphx-Mr)
-
-What This Means For Developers
-
-Far from making developers obsolete, AI is transforming us into super-developers who can accomplish in hours what previously took days. The winning formula isn't AI alone or humans alone - it's the synergy of human creativity, architectural thinking, and AI-powered implementation.
-
-Who's experimenting with AI pair programming? What have you built? I'd love to see your weekend projects and hear your experiences with this powerful collaboration.
 
 Github: alemhar/GeoPlottr
 
@@ -125,34 +102,6 @@ What it does
 - You see the instruction before anything runs.  
 - Click Continue to execute that step and review findings one‑by‑one.  
 - Minimal token use by design: small plan upfront, lightweight searches, you control when to proceed.
-
-Input options (what they’re for)
-
-- Full Name: The anchor identity for planning and disambiguation.  
-- LinkedIn URL: Ground-truth profile to avoid false positives; helps refine query targets.  
-- Twitter/X, Facebook, Instagram: Known handles improve cross‑platform correlation and targeted site: searches.  
-- GitHub: Useful for public email exposure, commit metadata, and README leaks.  
-- Personal Website: Source of contact pages, resumes/CVs, PDFs, and exposed directories.  
-- Usernames/Handles: Extra identifiers (e.g., @jdoe, j_doe) to map to other platforms.  
-- Location Hint: Narrows results to relevant local signals (addresses, directories, mentions).
-
-Why this matters
-
-- See how the “advisor” is thinking (step title, rationale, suggested queries).  
-- Keep control with Continue—no runaway costs or hidden work.  
-- Feels like working with a world‑class researcher who explains each move.
-
-The “agent crew”
-
-- Security Strategist: designs a high‑impact OSINT (Open‑Source Intelligence) plan (PII exposure, leaked credentials/tokens, sensitive docs, doxxing risks).  
-- Researcher: executes the plan and surfaces relevant public findings.  
-- Reporter: assembles a clean, readable output when you want a full report.
-
-What I learned
-
-- AI accelerates, humans direct. Visible agent reasoning + human decision gates = better results.  
-- Thoughtful UX beats brute-force automation: a simple Continue gate gives you stepwise visibility and tight control over token spend.  
-- Nostalgic hacker vibe designed for those who miss CRT monitors and believe every serious investigation should begin with a mysterious green terminal. 😁
 
 Github: alemhar/digital-footprints-analyzer
 
